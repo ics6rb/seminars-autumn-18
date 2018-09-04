@@ -1,0 +1,22 @@
+{
+  "name": "materials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "docs:build": "vuepress build ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ics6rb/materilas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ics6rb/materilas/issues"
+  },
+  "homepage": "https://github.com/ics6rb/materilas#readme",
+  "dependencies": {
+    "vuepress": "^0.14.2"
+  }
+}

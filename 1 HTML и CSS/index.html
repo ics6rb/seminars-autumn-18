@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>TODO List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        #task-list {
+            list-style-type: none;
+        }
+
+        input[type="checkbox"]:checked+.checkable {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TODO List</h1>
+    </header>
+
+    <main>
+        <div>
+            <h3>Все дела</h3>
+            <ul id="task-list">
+                <li>
+                    <input type="checkbox" id="1" />
+                    <label class="checkable" for="1">Дело 1</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="2" />
+                    <label class="checkable" for="2">Дело 2</label>
+                </li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div>
+            <h3>Добавьте дело</h3>
+            <form>
+                <input type="text" name="task" placeholder="Введите дело" />
+                <button type="submit">Создать</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

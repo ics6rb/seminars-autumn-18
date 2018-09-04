@@ -2,9 +2,9 @@
   "name": "materials",
   "version": "1.0.0",
   "description": "",
-  "main": "",
   "scripts": {
-    "docs:build": "vuepress build ."
+    "docs:build": "vuepress build docs",
+    "docs:serve": "vuepress dev docs"
   },
   "repository": {
     "type": "git",

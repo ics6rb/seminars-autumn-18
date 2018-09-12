@@ -3,8 +3,8 @@ home: true
 heroImage: /ruby.png
 heroText: Языки Интернет-программирования
 description: Все, что было на семинарах, и даже чуть больше
-# actionText: Материалы на сегодня
-# actionLink: /hot/
+actionText: Материалы на сегодня
+actionLink: /hot/
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 

@@ -2,10 +2,10 @@ module.exports = {
     title: 'ЯИП',
     themeConfig: {
         nav: [
-            {
-                text: 'Материалы на сегодня',
-                link: '/hot/',
-            },
+            // {
+            //     text: 'Материалы на сегодня',
+            //     link: '/hot/',
+            // },
             { 
                 text: 'Семинары',
                 link: '/seminars/',

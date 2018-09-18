@@ -95,7 +95,7 @@
             return li;
         }
 
-        function createErrorMessageTo(root, message) {
+        function renderErrorMessageTo(root, message) {
             const alert = document.createElement('div');
             alert.classList.add('alert')
             alert.classList.add('alert-danger');
@@ -105,22 +105,22 @@
             root.insertAdjacentElement('afterbegin', alert);
         }
 
-        function removeErrorMessagesFrom(root) {
+        function clearErrorMessagesIn(root) {
             root.innerHTML = '';
         }
 
-        function renderTaskList(taskList) {
-            taskList.innerHTML = '';
+        function renderTaskListTo(root) {
+            root.innerHTML = '';
 
             addedTodos.forEach(function (todoText) {
                 const todo = createTodoElement(todoText);
-                taskList.insertAdjacentElement('beforeend', todo);
+                root.insertAdjacentElement('beforeend', todo);
             });
         }
 
-        function addTodoElementTo(taskList, todoText) {
+        function addTodoElementTo(taskListRoot, todoText) {
             addedTodos.push(todoText);
-            renderTaskList(taskList);
+            renderTaskListTo(taskListRoot);
         }
 
         document.addEventListener('click', function (evt) {
@@ -147,15 +147,15 @@
             taskForm.addEventListener('submit', function (evt) {
                 evt.preventDefault();
 
-                removeErrorMessagesFrom(taskFormErrors);
+                clearErrorMessagesIn(taskFormErrors);
 
                 const form = evt.target;
                 const todoText = form.elements['new-task'].value;
 
                 if (!todoText) {
-                    createErrorMessageTo(taskFormErrors, 'Введите что-нибудь');
+                    renderErrorMessageTo(taskFormErrors, 'Введите что-нибудь');
                 } else if (addedTodos.includes(todoText)) {
-                    createErrorMessageTo(taskFormErrors, 'Такое дело уже было добавлено');
+                    renderErrorMessageTo(taskFormErrors, 'Такое дело уже было добавлено');
                 } else {
                     addTodoElementTo(taskList, todoText);
                 }
@@ -163,7 +163,7 @@
                 form.reset();
             });
 
-            renderTaskList(taskList);
+            renderTaskListTo(taskList);
         });
     </script>
 </body>

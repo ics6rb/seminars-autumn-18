@@ -3,8 +3,8 @@ home: true
 heroImage: /ruby.png
 heroText: Языки Интернет-программирования
 description: Все, что было на семинарах, и даже чуть больше
-# actionText: Материалы на сегодня
-# actionLink: /hot/
+actionText: Материалы на сегодня
+actionLink: http://syncfiddle.net/-LMcT6aUNDtaViS_QETv
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
@@ -26,3 +26,4 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 Для того, чтобы поиск материалов был проще, ниже будет список ссылок на материалы прошедших семинаров.
 
 1. [HTML, CSS, Bootstrap](/seminars/seminar-1.html).
+2. [JavaScript](/seminars/seminar-2.html).

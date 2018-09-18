@@ -26,3 +26,4 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 Для того, чтобы поиск материалов был проще, ниже будет список ссылок на материалы прошедших семинаров.
 
 1. [HTML, CSS, Bootstrap](/seminars/seminar-1.html).
+2. [JavaScript](/seminars/seminar-2.html).

@@ -23,6 +23,7 @@ module.exports = {
                     children: [
                         '',
                         'seminar-1',
+                        'seminar-2',
                     ]
                 }
             ],
@@ -33,6 +34,7 @@ module.exports = {
                     children: [
                         '',
                         'seminar-1',
+                        'seminar-2',
                     ]
                 }
             ],

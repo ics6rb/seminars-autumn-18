@@ -1,5 +1,8 @@
 module.exports = {
     title: 'ЯИП',
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
     themeConfig: {
         nav: [
             // {

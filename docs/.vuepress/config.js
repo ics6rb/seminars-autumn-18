@@ -27,6 +27,7 @@ module.exports = {
                         '',
                         'seminar-1',
                         'seminar-2',
+                        'seminar-3',
                     ]
                 }
             ],

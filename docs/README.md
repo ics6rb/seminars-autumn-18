@@ -27,3 +27,4 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 1. [HTML, CSS, Bootstrap](/seminars/seminar-1.html).
 2. [JavaScript](/seminars/seminar-2.html).
+3. [Основы Ruby](/seminars/seminar-3.html).

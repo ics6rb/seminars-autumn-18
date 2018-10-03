@@ -4,7 +4,7 @@ heroImage: /ruby.png
 heroText: Языки Интернет-программирования
 description: Все, что было на семинарах, и даже чуть больше
 actionText: Материалы на сегодня
-actionLink: https://www.jdoodle.com/html-css-javascript-online-editor#&togetherjs=kod9iFqftn
+actionLink: /hot/
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 

@@ -1,196 +1,116 @@
-# HTML и CSS
+# Основы Ruby
 
-![HTML5](/hot_1.png)
+## Пример организации кода
 
-## Шаблон HTML
+Структура директории:
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-
-</body>
-</html>
+```shell
+lab_5/
+    src.rb
+    test.rb
+    user.rb
 ```
 
-## Очищенный шаблон
+`src.rb`
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>TODO List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-</body>
-</html>
+```ruby
+def return_42
+  42
+end
 ```
 
-## Разметка
+`user.rb`
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>TODO List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <!-- Заголовок -->
-    <header>
-        <h1>TODO List</h1>
-    </header>
+```ruby
+require_relative 'src'
 
-    <!-- Основная часть -->
-    <main>
-        <!-- Список дел -->
-        <div>
-            <ul>
-                <li>Дело 1</li>
-                <li>Дело 2</li>
-            </ul>
-        </div>
-
-        <hr/>
-
-        <!-- Форма добавления дела -->
-        <div>
-            <form>
-                <input placeholder="Введите дело" />
-                <button type="submit">Создать</button>
-            </form>
-        </div>
-    </main>
-</body>
-</html>
+puts 'Введите любое число и получите в ответ 42:'
+any_number = gets.to_i
+puts "Вы ввели #{any_number}, получили в ответ #{return_42}"
 ```
 
-![CSS](/hot_2.gif)
+`test.rb`
 
-```css
-селектор1 {
-    /* свойство 1 */
-    /* свойство 2 */
-    /* ... */
-}
+```ruby
+require 'minitest/autorun'
+require_relative 'src'
 
-селектор2 {
-    /* свойство 3 */
-    /* свойство 4 */
-    /* ... */
-}
+class Return42Test < MiniTest::Unit::TestCase
+  def test_returns_42
+    assert_equal 42, return_42
+  end
+end
 ```
 
-## Использование селекторов
+## Задачи
+
+### 0
+
+Вычислить значение выражения
+
+![formula1](https://render.githubusercontent.com/render/math?math=a%20%3D%20%7B%7By%20-%20x%5E2%7D%20%5Cover%20%7Bx%20-%20%7By%7D%20%5Cover%20%7Bb%20%2B%20x%5E2%7D%7D%7D&mode=display)
+
+Вычислить значение выражения
+
+![formula2](https://render.githubusercontent.com/render/math?math=%7Ctg%7B%7Bx%5E2%20%5Ccdot%20%28x%20-%202%29%7D%20%5Cover%20%7Be%5Ex%7D%7D%7C&mode=display)
 
 ### 1
 
-```html
-<!-- Список дел -->
-<div>
-    <ul>
-        <li>
-            <input type="checkbox" id="1" />
-            <label for="1">Дело 1</label>
-        </li>
-        <li>
-            <input type="checkbox" id="2" />
-            <label for="2">Дело 2</label>
-        </li>
-    </ul>
-</div>
-```
+Написать функцию, которая принимает на вход строку и возвращает ее палиндром (переворачивает строку). Пример работы:
 
-```css
-ul {
-    list-style-type: none;
-}
+```ruby
+get_palindrome '123' # '321'
 ```
 
 ### 2
 
-```html
-<!-- Список дел -->
-<div>
-    <ul id="task-list">
-        <li>
-            <input type="checkbox" id="1" />
-            <label for="1">Дело 1</label>
-        </li>
-        <li>
-            <input type="checkbox" id="2" />
-            <label for="2">Дело 2</label>
-        </li>
-    </ul>
-</div>
-```
+Написать функцию, которая принимает на вход строку и проверяет, является ли она палиндромом. Пример работы:
 
-```css
-#task-list {
-    list-style-type: none;
-}
-```
-
-## Зачеркивание текста
-
-```html
-<!-- Список дел -->
-<div>
-    <ul id="task-list">
-        <li>
-            <input type="checkbox" id="1" />
-            <label for="1">Дело 1</label>
-        </li>
-        <li>
-            <input type="checkbox" id="2" />
-            <label for="2">Дело 2</label>
-        </li>
-    </ul>
-</div>
-```
-
-### 1
-
-```css
-input + label {
-    text-decoration: line-through;
-}
-```
-
-### 2
-
-```css
-input[type="checkbox"]:checked + label {
-    text-decoration: line-through;
-}
+```ruby
+palindrome? '123' # false
+palindrome? '111' # true
 ```
 
 ### 3
 
-```css
-input[type="checkbox"]:checked + .checkable {
-    text-decoration: line-through;
-}
+Написать функцию, которая принимает на вход массив и меняет в нем местами наибольший и наименьший элементы. Если в массиве больше одного наибольшего/наименьшего элемента, поменять местами только первую (по счету, т.е. с наименьшими индексами) пару. Пример работы:
+
+```ruby
+swap [1, 2, 3, 2] # [3, 2, 1, 2]
+swap [1, 2, 1, 2, 5, 10, 10] # [10, 2, 1, 2, 5, 1, 10]
 ```
 
-![Form](/hot_3.gif)
+### 4
 
-```html
-<form>
-    <input name="name1" />
-    <input name="name2" />
-    <input type="submit" value="Отправить" />
-</form>
+Написать функцию, которая принимает на вход массив и считает сумму квадратов его элементов. Пример работы:
+
+```ruby
+square_ary [1, 2, 3] # [1, 4, 9]
 ```
+
+### 5
+
+Написать функцию, которая принимает на вход число в десятичной системе счисления. Внутри себя она переводит это число в двоичную систему счисления, записывает его наоборот и возвращает получившееся число в десятичной системе счисления. Пример работы:
+
+```ruby
+binary_reverse 6 # 3, т.к. 6 (110) => 3 (011)
+binary_reverse 10 # 5, т.к. 10 (1010) => 5 (0101)
+```
+
+### 6
+
+Написать функцию, которая принимает на вход строку и переставляет в ней слова в порядке убывания их длины.
+
+```ruby
+change_order 'Зато все ок' # 'ок все Зато'
+```
+
+### 7
+
+Дана последовательность строк. Строки содержат слова, разделенные пробелом. Используя цифровой шифр, например 31206, зашифровать каждую строку по следующей методике: 31206 312063 12 063. Пример работы:
+
+```ruby
+encrypt '31206', 'Пирог сгорел дотла' # 'Ткток фкррло ересг'
+```
+
+То есть, к каждой букве применяют соответствующую цифру для определения смещения этой буквы, с целью получения буквы шифра.

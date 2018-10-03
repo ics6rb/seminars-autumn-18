@@ -3,8 +3,8 @@ home: true
 heroImage: /ruby.png
 heroText: Языки Интернет-программирования
 description: Все, что было на семинарах, и даже чуть больше
-# actionText: Материалы на сегодня
-# actionLink: https://www.jdoodle.com/html-css-javascript-online-editor#&togetherjs=kod9iFqftn
+actionText: Материалы на сегодня
+actionLink: https://www.jdoodle.com/html-css-javascript-online-editor#&togetherjs=kod9iFqftn
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
@@ -27,3 +27,4 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 1. [HTML, CSS, Bootstrap](/seminars/seminar-1.html).
 2. [JavaScript](/seminars/seminar-2.html).
+3. [Основы Ruby](/seminars/seminar-3.html).

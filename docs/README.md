@@ -29,3 +29,4 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 2. [JavaScript](/seminars/seminar-2.html).
 3. [Основы Ruby](/seminars/seminar-3.html).
 4. [Регулярные выражения](/seminars/seminar-4.html).
+5. [Ленивые вычисления](/seminars/seminar-5.html).

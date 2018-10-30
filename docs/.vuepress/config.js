@@ -29,6 +29,7 @@ module.exports = {
                         'seminar-2',
                         'seminar-3',
                         'seminar-4',
+                        'seminar-5',
                     ]
                 }
             ],
@@ -40,6 +41,7 @@ module.exports = {
                         '',
                         'seminar-1',
                         'seminar-2',
+                        'seminar-5',
                     ]
                 }
             ],

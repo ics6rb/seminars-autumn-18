@@ -68,5 +68,5 @@ rails g controller example in out
 * `app/views/example/in.html.erb`;
 * `app/views/example/out.html.erb`;
 * **`config/routes.rb`**;
-* 
+* `spec/controllers/example_controller_spec.rb`;
 * `Gemfile`.
